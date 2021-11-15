@@ -1,25 +1,48 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main() {
+int compare( const void *a, const void *b )
+{
+    ///Este método não funciona para números decimais:
+    //return (int) ( *(float*)a - *(float*)b );
 
-    float a, b, c, d, e, maior=0, menor=10, soma; //Criando as variáveis;
+    ///Melhor maneira de tratar números decimais:
+    if ( *(float*)a > *(float*)b  )
+        return 1;
+    else if ( *(float*)a < *(float*)b  )
+        return -1;
+    else
+        return 0;
 
-    scanf("%f %f %f %f %f", &a, &b, &c, &d, &e); //Lendo as variáveis;
-    soma = a+b+c+d+e; //Somando as notas;
-    float notas[5] = {a, b, c, d, e}; //Passando as notas para uma lista, assim facilitando a comparação;
+    ///Se devolver um número maior que zero, então a>b;
+    ///Se devolver um número menor que zero, então a<b;
+    ///Se devolver zero, então a=b;
+}
 
-    for (int i=0; i < 5; i++) { //Fazendo um laço de repetição;
 
-        if (notas[i] > maior) { //Encontrando o maior valor;
-            maior = notas[i];
-        }
+int main()
+{
+    float notas[5], soma=0;
+    int nota;
 
-        if (notas[i] < menor) { //Encontrando o menor valor;
-            menor = notas[i];
-        }
+    ///Lendo as cinco notas:
+    for ( nota=0; nota<5; nota++ )
+    {
+        scanf("%f", &notas[nota]);
     }
 
-    printf("%.1f", soma - (maior+menor)); //Impimindo o resultado com apenas uma casa após a vírgula;
+    ///sintaxe: qsort( nomeVetor, tamanhoVetor, tamanhoDoTipoDeDados, FunçãoQueCompara );
+    qsort( notas, 5, sizeof(float), compare );
+
+    ///Somando apenas as notas que se encontram no meio:
+    for ( nota=1; nota<4; nota++ )
+    {
+        soma+=notas[nota];
+        //printf("%f\n", notas[nota]);
+    }
+
+    printf("%.1f\n", soma);
 
     return 0;
 }

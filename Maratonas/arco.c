@@ -1,50 +1,37 @@
 #include <stdio.h>
 #include <math.h>
 
+float d2p(float x, float y)
+{
+    float d = sqrt( pow(x-0, 2.0)+pow(y-0, 2.0) );
 
-float distancia(float X, float Y, int x, int y) {
-
-    float resultado;
-
-    resultado = sqrt( pow(x - X, 2) + pow(y - Y, 2) );
-
-    return resultado;
-
+    return d;
 }
 
-
-int main() {
-
-    int N, X, Y, n, p, pontos;
+int main()
+{
+    int N, n, X, Y, p;
     float flechas[100000];
+    long long int pontos=0;
 
-    scanf("%i", &N);
+    scanf("%d", &N);
 
-    pontos = 0;
-    n = 1;
+    for ( n=0; n<N; n++ )
+    {
+        scanf("%d %d", &X, &Y);
+        flechas[n] = d2p(X, Y);
 
-    while (n <= N) {
-        scanf("%i%i", &X, &Y);
-        flechas[n] = distancia(X, Y, 0, 0);
-
-        p = 1;
-
-        while (p < n) {
-
-            if (flechas[p] <= flechas[n]) {
-
-                pontos += 1;
-
+        for ( p=0; p<n; p++ )
+        {
+            if ( flechas[p] <= flechas[n] )
+            {
+                pontos++;
             }
-
-            p += 1;
-
         }
-
-        n += 1;
-
     }
 
-    printf("%i\n", pontos);
+    printf("%lld\n", pontos);
+
+
     return 0;
 }
