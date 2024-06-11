@@ -1,14 +1,24 @@
-# Linguagem C
-Neste repositório estão algumas das minhas experiências na Linguagem C, com exercícios do URI e de algumas maratonas, e dois projetos de estudos, os quais seguem em amostra abaixo.
+## Apresentação Geral
 
-- [Author](https://github.com/Edssaac/Linguagem-C/tree/main/Author) </br>
-Um editor de texto que permite criar, ler ou sobreecrever arquivos já existentes, programado totalmente em C.
+**Nome do Projeto:** Projetos C
 
-![ssd](https://raw.githubusercontent.com/Edssaac/Linguagem-C/main/Author/Author.gif) 
+**Descrição:**
+
+Neste repositório, você encontrará uma coleção das minhas experiências com a linguagem C. Ele inclui exercícios do URI Online Judge, desafios de maratonas de programação e dois projetos de estudo. Abaixo estão algumas amostras do conteúdo disponível.
+
+- [Author](https://github.com/Edssaac/Linguagem-C/tree/main/Author)
+
+  Um editor de texto totalmente programado em C, que permite criar, ler e sobrescrever arquivos existentes.
+
+  ![Author](https://raw.githubusercontent.com/Edssaac/Linguagem-C/main/Author/Author.gif) 
 
 
-- [Hollingsworth](https://github.com/Edssaac/Linguagem-C/tree/main/Hollingsworth) </br>
-Um simples porém não finalizado jogo de texto, programado para ser jogado diretamente no terminal e com a progressão histórica baseada nas escolhas realizadas pelo jogador. <br>
-Fortemente inspirado nos clássicos livro-jogos de RPG, trago essa releitura programada com um pouco do que a linguagem C tem a oferecer.
+- [Hollingsworth](https://github.com/Edssaac/Linguagem-C/tree/main/Hollingsworth)
+
+  Um jogo de texto simples, mas ainda em desenvolvimento, programado para ser jogado diretamente no terminal. A progressão da história é baseada nas escolhas feitas pelo jogador. Fortemente inspirado nos clássicos   livros-jogos de RPG, esta releitura programada demonstra um pouco do que a linguagem C tem a oferecer.
  
-![sas](https://raw.githubusercontent.com/Edssaac/Linguagem-C/main/Hollingsworth/hollingsworth.gif)
+  ![Hollingsworth](https://raw.githubusercontent.com/Edssaac/Linguagem-C/main/Hollingsworth/hollingsworth.gif)
+
+**Tecnologias Utilizadas:**
+
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
